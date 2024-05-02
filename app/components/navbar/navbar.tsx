@@ -19,9 +19,14 @@ function Navbar() {
     setOpen(open === 'hidden' ? 'block' : 'hidden')
   }
 
+  let localName: string | null = ''
+  let localId: string | null = ''
+
   useEffect(() => {
-    const localName = localStorage.getItem('user_name')
-    const localId = localStorage.getItem('user_id')
+    if (typeof window !== 'undefined') {
+      localName = localStorage.getItem('user_name')
+      localId = localStorage.getItem('user_id')
+    }
 
     if (localName != undefined && localId != undefined) {
       const parsedName = JSON.parse(localName);

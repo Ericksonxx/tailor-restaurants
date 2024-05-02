@@ -58,8 +58,8 @@ const MapContainer = () => {
           setRestaurantList={setRestaurantList} 
           setMiddleRestaurant={setMiddleRestaurant}
           middleRestaurant={middleRestaurant}
-          setSelectedRestaurant={setSelectedRestaurant}
-          selectedRestaurant={selectedRestaurant}
+                  setSelectedRestaurant={setSelectedRestaurant}
+        selectedRestaurant={selectedRestaurant}
         />
       </div>
       <Reel   

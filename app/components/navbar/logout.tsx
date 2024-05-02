@@ -6,8 +6,11 @@ import axios from 'axios';
 export default function Logout() {
 
     const router = useRouter()
+    let authToken = ''
 
-    const authToken = localStorage.getItem("authToken") || '';
+    if (typeof window !== 'undefined') {
+        authToken = localStorage.getItem("authToken") || '';
+      }
 
     const [loading, setLoading] = useState(false)
      async function logOut() {
