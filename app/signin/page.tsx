@@ -9,9 +9,11 @@ export default function IntroScreen() {
     const router = useRouter()
 
     useEffect(() => {
-        if(localStorage.getItem('authToken')) {
-            router.push('/map')
-        }
+        if (typeof window !== 'undefined') {
+            if(localStorage.getItem('authToken')) {
+                router.push('/map')
+            }
+          }
     },[])
 
     return (
