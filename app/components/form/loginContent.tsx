@@ -1,11 +1,14 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { useUserContext } from '../../context/context';
+import { useRouter } from 'next/navigation';
 
 function LoginContent() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const { loginUser, user } = useUserContext()
+
+  const router = useRouter();
 
   const handleLogin = async () => {
     try {
@@ -16,10 +19,8 @@ function LoginContent() {
   }
   
   if (typeof window !== 'undefined') {
-    if(localStorage.getItem('user_name') === null || localStorage.getItem('user_id') === null) {
-        return(
-            <p>Please Login</p>
-        )
+    if(localStorage.getItem('authToken') != null) {
+        router.push('./map')
     }
   }
 
