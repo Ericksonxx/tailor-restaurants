@@ -1,0 +1,17 @@
+#custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  #custom-file-input::before {
+    content: 'Añadir imágen';
+    width: 100%;
+    text-align: center;
+    margin-top: 19vh;
+    display: inline-block;
+    outline: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }

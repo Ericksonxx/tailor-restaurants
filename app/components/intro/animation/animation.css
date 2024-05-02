@@ -1,0 +1,86 @@
+
+.animation{
+    animation: animationWrapper;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+.logo-icon-svg {
+    height: 50px;
+    margin-right: 1%;
+    animation: icon;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateX(0);
+}
+.logo-lettering-svg {
+    height: 50px;
+}
+
+.logo-lettering-path{
+    animation: letters;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+@keyframes icon {
+    0% {
+        opacity: 0; 
+    }
+    25% {
+        opacity: 1;
+        transform: translateX(60px);
+        height: 70px;
+    }
+    50% {
+        opacity: 1; 
+        transform: translateX(00px);
+        height: 50px;
+
+    }
+    75% {
+        opacity: 1; 
+
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes letters {
+    0% {
+        opacity: 0; 
+    }
+    25% {
+        opacity: 0; 
+    }
+    50% {
+        opacity: 0; 
+    }
+    75% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animationWrapper {
+    0% {
+        display: block;
+    }
+    25% {
+        display: block;
+    }
+    50% {
+        display: block;
+    }
+    75% {
+        display: block;
+    }
+    100% {
+        display: none;
+    }
+}

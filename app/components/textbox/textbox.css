@@ -1,0 +1,25 @@
+
+.textbox-wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: white;
+    animation: openScreen;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    border-radius: 0;
+}
+
+@keyframes openScreen {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+

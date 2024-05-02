@@ -1,0 +1,17 @@
+.loader-svg {
+    transform-origin: center;
+    animation: spinner-animation 1s cubic-bezier(0.36, 0.6, 0.31, 1) infinite;
+    transform: scale(1.3)
+}
+.loader-svg circle {
+    fill: #264BEB; 
+}
+
+@keyframes spinner-animation {
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

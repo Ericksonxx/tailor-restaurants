@@ -1,0 +1,27 @@
+@keyframes pointDown {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  
+  @keyframes pointUp {
+    0% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .arrow-icon {
+    transition: 0.3s ease;
+    animation: pointDown 0.5s forwards;
+  }
+  
+  .rotate-180 {
+    animation: pointUp 0.5s forwards; /* Apply animation for rotating arrow */
+  }
+  

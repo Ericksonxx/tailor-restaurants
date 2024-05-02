@@ -1,0 +1,5 @@
+.leaflet-container {
+  filter: invert(100%) hue-rotate(180deg) brightness(100%) contrast(100%);
+  opacity: 0.7;
+  border-radius: 20px;
+}
