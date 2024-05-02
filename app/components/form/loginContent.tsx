@@ -13,10 +13,15 @@ function LoginContent() {
     } catch (error) {
       console.error('Login error:', error);
     }
-  };
-
-  const localName = localStorage.getItem('user_name')
-  const localId = localStorage.getItem('user_id')
+  }
+  
+  if (typeof window !== 'undefined') {
+    if(localStorage.getItem('user_name') === null || localStorage.getItem('user_id') === null) {
+        return(
+            <p>Please Login</p>
+        )
+    }
+  }
 
   return (
     <div className="mt-12">
