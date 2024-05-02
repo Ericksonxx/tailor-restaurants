@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import './page.css'
+import { useEffect } from 'react'
 
 export default function AddRestaurant() {
 
@@ -9,13 +10,13 @@ export default function AddRestaurant() {
     const [address, setAddress] = useState<string>('')
     const [description, setDescription] = useState<string>('')
 
-    if(localStorage.getItem('authToken') === null) {
-        return (
-            <div>
-                Please Login
-            </div>
-        )
-    }
+    if (typeof window !== 'undefined') {
+        if(localStorage.getItem('user_name') === null || localStorage.getItem('user_id') === null) {
+            return(
+                <p>Please Login</p>
+            )
+        }
+      }
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
