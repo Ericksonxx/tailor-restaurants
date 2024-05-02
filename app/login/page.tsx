@@ -8,8 +8,12 @@ export default function LoginPage() {
 
     const router = useRouter()
  
-    const authToken = localStorage.getItem('authToken');
+    let authToken = undefined
     const [loading, setLoading] = useState(false);
+
+    if (typeof window !== 'undefined') {
+        authToken = localStorage.getItem('authToken');
+      }
 
     useEffect(() => {
         setLoading(true)
